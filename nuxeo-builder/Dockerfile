@@ -42,7 +42,8 @@ ENV MAVEN_CONFIG "$USER_HOME_DIR/.m2"
 
 RUN mkdir -p "${MAVEN_CONFIG}/repository/com/phloc/phloc-css/3.3.1"
 WORKDIR "${MAVEN_CONFIG}/repository/com/phloc/phloc-css/3.3.1"
-RUN wget https://devtools.jahia.com/nexus/content/repositories/public/com/phloc/phloc-css/3.3.1/phloc-css-3.3.1.jar
+#RUN wget https://devtools.jahia.com/nexus/content/repositories/public/com/phloc/phloc-css/3.3.1/phloc-css-3.3.1.jar
+RUN wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/phloc-css/phloc-css-3.3.1.jar
 COPY settings.xml ${MAVEN_CONFIG}/
 
 WORKDIR /media/build-volume/nuxeo
