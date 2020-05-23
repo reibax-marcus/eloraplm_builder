@@ -1,0 +1,55 @@
+From bc1607deecb869cfe04923d2dcd33f495545a5ab Mon Sep 17 00:00:00 2001
+From: reibax <reibax@gmail.com>
+Date: Fri, 22 May 2020 17:59:08 +0200
+Subject: [PATCH] Use custom nexus repo for hotfix-releases
+
+---
+ pom.xml | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+diff --git a/pom.xml b/pom.xml
+index 145e816ba25..e093eeb7fee 100755
+--- a/pom.xml
++++ b/pom.xml
+@@ -6227,17 +6227,17 @@
+     <!-- Hotfix Repositories -->
+     <repository>
+       <id>hotfix-releases</id>
+-      <url>https://maven.nuxeo.org/nexus/content/repositories/hotfix-releases</url>
++      <url>http://nexus:8081/nexus/content/repositories/releases/</url>
+       <releases>
+         <enabled>true</enabled>
+       </releases>
+       <snapshots>
+-        <enabled>false</enabled>
++        <enabled>true</enabled>
+       </snapshots>
+     </repository>
+     <repository>
+       <id>hotfix-snapshots</id>
+-      <url>https://maven.nuxeo.org/nexus/content/repositories/hotfix-snapshots</url>
++      <url>http://nexus:8081/nexus/content/repositories/snapshots/</url>
+       <releases>
+         <enabled>false</enabled>
+       </releases>
+@@ -6302,13 +6302,13 @@
+     </site>
+     <repository>
+       <id>hotfix-releases</id>
+-      <url>http://mavenin.nuxeo.com/nexus/content/repositories/hotfix-releases</url>
++      <url>http://nexus:8081/nexus/content/repositories/releases</url>
+     </repository>
+     <snapshotRepository>
+       <id>hotfix-snapshots</id>
+-      <url>http://mavenin.nuxeo.com/nexus/content/repositories/hotfix-snapshots</url>
++      <url>http://nexus:8081/nexus/content/repositories/snapshots</url>
+       <uniqueVersion>true</uniqueVersion>
+     </snapshotRepository>
+   </distributionManagement>
+ 
+-</project>
+\ No newline at end of file
++</project>
+-- 
+2.20.1
+

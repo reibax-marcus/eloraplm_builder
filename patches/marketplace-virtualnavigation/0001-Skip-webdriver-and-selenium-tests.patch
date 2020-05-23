@@ -1,0 +1,32 @@
+From fa6ad011c8ff3664a6bded240e96d2467382ec88 Mon Sep 17 00:00:00 2001
+From: reibax <reibax@gmail.com>
+Date: Sat, 23 May 2020 12:20:02 +0200
+Subject: [PATCH] Skip webdriver and selenium tests
+
+---
+ pom.xml | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+diff --git a/pom.xml b/pom.xml
+index 4ac221a..8c69a1a 100644
+--- a/pom.xml
++++ b/pom.xml
+@@ -14,8 +14,6 @@
+ 
+   <modules>
+     <module>marketplace</module>
+-    <module>ftest/webdriver</module>
+-    <module>ftest/selenium</module>
+   </modules>
+ 
+   <dependencyManagement>
+@@ -59,4 +57,4 @@
+     <url>https://github.com/nuxeo/marketplace-virtualnavigation</url>
+   </scm>
+ 
+-</project>
+\ No newline at end of file
++</project>
+-- 
+2.20.1
+

@@ -1,0 +1,31 @@
+From 95488c79a933a6b7c1b75b46038271df30338cb2 Mon Sep 17 00:00:00 2001
+From: reibax <reibax@gmail.com>
+Date: Sat, 23 May 2020 11:30:53 +0200
+Subject: [PATCH] Skip webdriver tests
+
+---
+ pom.xml | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+diff --git a/pom.xml b/pom.xml
+index bde7655..556f61d 100644
+--- a/pom.xml
++++ b/pom.xml
+@@ -14,7 +14,6 @@
+ 
+   <modules>
+     <module>marketplace</module>
+-    <module>ftest/webdriver</module>
+   </modules>
+ 
+   <dependencyManagement>
+@@ -58,4 +57,4 @@
+     <url>https://github.com/nuxeo/marketplace-dam</url>
+   </scm>
+ 
+-</project>
+\ No newline at end of file
++</project>
+-- 
+2.20.1
+
